@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ShipList from '../components/ShipList';
+
 class Ships extends React.Component {
     state = {
         ships: []
@@ -32,7 +34,7 @@ class Ships extends React.Component {
     render () {
         console.log(this.state.ships);
         return (
-            <div>Ships List</div>
+            <ShipList props={{ ships: this.state.ships }} />
         )
     }
 }
