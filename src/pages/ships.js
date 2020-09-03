@@ -1,10 +1,21 @@
 import React from 'react';
 
+import { Grid } from '@material-ui/core';
+
 import ShipList from '../components/ShipList';
+import Navbar from '../components/Navbar';
 
 class Ships extends React.Component {
-    state = {
-        ships: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            ships: [],
+            count: 0
+        }
+    }
+
+    handleCounterChange() {
+        this.setState({ count: this.state.count + 1 })
     }
 
     componentDidMount() {
@@ -19,7 +30,7 @@ class Ships extends React.Component {
                             name
                             manufacturers
                             costInCredits
-                        }
+                            }
                         }
                     }
                 `
@@ -34,7 +45,13 @@ class Ships extends React.Component {
     render () {
         console.log(this.state.ships);
         return (
-            <ShipList props={{ ships: this.state.ships }} />
+            <Grid container xs={12} style={{ display: 'flex', justifyContent: 'center' }}>
+                <Navbar props={{ count: this.state.count }} />
+                <ShipList 
+                    props={{ ships: this.state.ships }} 
+                    onChangeCounter={this.handleCounterChange.bind(this)}
+                />
+            </Grid>
         )
     }
 }
