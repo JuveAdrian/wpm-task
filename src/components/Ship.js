@@ -13,7 +13,8 @@ const useStyles = () => ({
         fontSize: '1em'
     },
     manufac: {
-        fontSize: '0.7em'
+        fontSize: '0.7em',
+        height: '3em'
     }
 })
 
@@ -28,15 +29,23 @@ class Ship extends React.Component {
             count: this.props.count
         }
     } 
+
     addToCart = () => {
-        this.setState({cartCounter: this.state.cartCounter + 1})
-        console.log(this.state.cartCounter);
+       this.props.onChangeCounter(this.state.cartCounter);
+       document.getElementById(this.state.name).value = " ";
     }
+
+    inuptValue = (e) => {
+        this.setState({cartCounter: e.target.value})
+        console.log(e.target.value)
+    }
+
+
     render() {
         const { classes } = this.props;
         return (
-            <Grid item xs={12} sm={6} md={4} xl={3} >
-                <Card className={classes.box}>
+            <Grid item xs={12} sm={6} md={4} xl={3} key={this.state.name}>
+                <Card className={classes.box} >
                     <CardContent>
                         <Typography component="h2" className={classes.title}>
                             {this.state.name}
@@ -51,8 +60,8 @@ class Ship extends React.Component {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Input defaultValue="1" />
-                        <Button onClick={this.props.onChangeCounter}>Add to Cart</Button>
+                        <Input onChange={this.inuptValue} id={this.state.name} />
+                        <Button onClick={this.addToCart} >Add to Cart</Button>
                     </CardActions>
                 </Card>
             </Grid>

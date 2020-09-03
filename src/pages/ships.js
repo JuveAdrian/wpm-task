@@ -14,8 +14,8 @@ class Ships extends React.Component {
         }
     }
 
-    handleCounterChange() {
-        this.setState({ count: this.state.count + 1 })
+    handleCounterChange(addInt) {
+        this.setState({ count: this.state.count + parseInt(addInt) })
     }
 
     componentDidMount() {
