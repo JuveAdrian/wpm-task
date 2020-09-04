@@ -49,7 +49,6 @@ class Ship extends React.Component {
 
     addToCart = () => {
        this.props.onChangeCounter(this.state.cartCounter);
-       document.getElementById(this.state.name).value = " ";
     }
 
     inuptValue = (e) => {
