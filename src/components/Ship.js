@@ -67,7 +67,7 @@ class Ship extends React.Component {
                         </Typography>
                         <Box>
                             {this.state.manufacturers.map( (item) => (
-                                <Typography component="p" className={classes.manufac}>{item + ' \n'}</Typography>
+                                <Typography component="p" className={classes.manufac} key={item.indexOf()}>{item + ' \n'}</Typography>
                             ))}
                         </Box>
                         <Typography component="p">

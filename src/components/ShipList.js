@@ -19,6 +19,7 @@ class ShipList extends React.Component {
                     <Ship
                         props={{ ship: ship }}
                         onChangeCounter={this.props.onChangeCounter}
+                        key={ship.id}
                     />
                 ))}
             </Grid>            
