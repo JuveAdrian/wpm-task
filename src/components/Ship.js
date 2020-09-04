@@ -60,7 +60,7 @@ class Ship extends React.Component {
     render() {
         const { classes } = this.props;
         return (
-            <Grid item xs={12} sm={6} md={4} lg={3} >
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2} >
                 <Card className={classes.box} >
                     <CardContent>
                         <Typography component="h2" className={classes.title}>

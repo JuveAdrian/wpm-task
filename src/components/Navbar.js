@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 const useStyles = () => ({
     nav: {
         backgroundColor: '#121212',
-        padding: '15px 10px',
+        padding: '20px 10px',
         display: 'flex',
         flexFlow: 'wrap',
         justifyContent: 'space-between'
