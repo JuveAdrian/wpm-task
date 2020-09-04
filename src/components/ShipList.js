@@ -14,11 +14,11 @@ class ShipList extends React.Component {
     
     render() {
         return (
-            <Grid item container xs={11} style={{ display: 'flex', alignItems: 'stretch' }}>
+            <Grid item container xs={10} sm={11} style={{ display: 'flex', alignItems: 'stretch' }}>
                 {this.props.props.ships.map(ship => (
                     <Ship
                         props={{ ship: ship }}
-                        onChangeCounter={this.props.onChangeCounter} 
+                        onChangeCounter={this.props.onChangeCounter}
                     />
                 ))}
             </Grid>            

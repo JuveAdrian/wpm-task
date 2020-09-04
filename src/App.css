@@ -1,0 +1,17 @@
+label {
+    color: #fff !important;
+    outline-color: coral !important;
+}
+
+.MuiInputBase-input {
+    outline-color: coral;
+}
+
+.MuiBadge-badge {
+    background-color: #ffe81f !important;
+    color: #000 !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: #777 !important;
+}

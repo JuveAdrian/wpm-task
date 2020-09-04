@@ -45,7 +45,7 @@ class Ships extends React.Component {
     render () {
         console.log(this.state.ships);
         return (
-            <Grid container xs={12} style={{ display: 'flex', justifyContent: 'center' }}>
+            <Grid container style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#21252b' }}>
                 <Navbar props={{ count: this.state.count }} />
                 <ShipList 
                     props={{ ships: this.state.ships }} 
